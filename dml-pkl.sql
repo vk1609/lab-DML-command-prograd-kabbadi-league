@@ -1,136 +1,100 @@
-
 -- PROGRESSION 1:
 
 --1. Insert into city
-insert into city(id,name)
-values(1,'mumbai');
-Select * from city;
+INSERT INTO CITY
+(ID , NAME)
+VALUES
+(1 , 'VIZAG	');
 
 --2. Insert into referee
-
-
-insert into referee(id,name)
-values(2,'john');
-select * from referee;
+INSERT INTO REFEREE
+(ID , NAME)
+VALUES
+(1 , ' AJAY SINGH');
 
 --3. Insert into innings
-
-
-insert into innings(id, innings_number)
-values(2,1);
-select *from innings;
+INSERT INTO INNINGS
+(ID , INNINGS_NUMBER)
+VALUES
+(1 , 2);
 
 --4. Insert into extra_type
-
-
-insert into extra_type(id,name)
-values (1, 'four');
-select *from extra_type;
+INSERT INTO EXTRA_TYPE
+(ID , NAME)
+VALUES
+(1, 'RAHUL CHAUDHARI');
 
 --5. Insert into skill
-
-insert into skill
-VALUES(1,'racing');
-select *from skill;
-
+INSERT INTO SKILL
+(ID , NAME)
+VALUES
+(1, 'RAIDER');
 
 --6. Insert into team
-
-
-insert into team values(11,'smith','SK',1,3);
-select *from team;
-
+INSERT INTO TEAM
+(ID , NAME , COACH , HOME_CITY , CAPTAIN)
+VALUES
+(1, 'TELUGU TITANS' , 'MR. GHOLAMREZA MAZANDARANI' , 1 , 1);
 
 --7. Insert into player
-
-insert into player values(103,'shakib', 'BANGLADESH',3,7);
-select * from player;
-
+INSERT INTO PLAYER
+(ID , NAME , COUNTRY , SKILL_ID , TEAM_ID)
+VALUES
+(1 , 'NILESH SALUNKE' , 'INDIA' , 1 , 1);
 
 --8. Insert into venue
-
-
-insert into venue values(1,'stadium1',1);
-select *from venue;
+INSERT INTO VENUE
+(ID , STADIUM_NAME , CITY_ID)
+VALUES
+(1 , 'G.M.C.BALAYOGI SATS INDOOR STADIUM' , 1);
 
 --9. Insert into event
-
-
-insert into event values(1,2,3,4,203,90,490,12,23);
-select *from event;
+INSERT INTO EVENT
+(ID , INNINGS_ID , EVENT_NO , RAIDER_ID , RAID_POINTS , DEFENDING_POINTS , CLOCK_IN_SECONDS , TEAM_ONE_SCORE , TEAM_TWO_SCORE)
+VALUES
+(1 , 2 , 1 , 1 , 10 , 6 , 30 , 16 , 10 );
 
 --10. Insert into extra_event
-
-
-insert into extra_event values(1,3,5,7,9);
-select *from extra_event;
+INSERT INTO EXTRA_EVENT
+(ID , EVENT_ID , EVENT_TYPE_ID , POINTS , SCORING_TEAM_ID)
+VALUES
+( 1, 1 , 1 , 16 , 1);
 
 --11. Insert into outcome
-
-
-insert into outcome values(1,'STAR',1,1,100);
-select *from outcome;
+INSERT INTO OUTCOME
+(ID , STATUS , WINNER_TEAM_ID , SCORE , PLAYER_OF_MATCH)
+VALUES
+(1 , 'COMPLETED' , 1 , 18 , 2);
 
 --12. Insert into game
-
-
-insert into game values(1,'21-JUN-21',1,1,1,1,1,1,1,1);
-select *from game;
-
+INSERT INTO GAME 
+VALUES(1 , '21-JAN-23', 1, 1, 1, 1, 1, 1, 1, 1);
 --13. Update player table
-
-UPDATE player
-SET skill_id = 4
-WHERE skill_id = 5;
-SELECT * FROM player;
-
+UPDATE PLAYER 
+SET SKILL_ID = 2
+WHERE COUNTRY = 'INDIA';
 
 --14. Update player table
-
-
-UPDATE player
-SET table_num=7
-WHERE table_num=1;
-SELECT * FROM player;
+UPDATE PLAYER
+SET NAME = 'ROHIT RANA'
+WHERE TEAM_ID = 1;
 
 --15. Update player table
 
-
-SET name = 'david'
-WHERE name = 'aaron';
-SELECT * FROM player;
-
+UPDATE PLAYER 
+SET NAME = 'XAVI' WHERE ID=3;
 --16. Update player table
-
-
-UPDATE player
-UPDATE player
-SET name = 'steve'
-WHERE name = 'david';
-SELECT * FROM player;
-
+ UPDATE PLAYER 
+ SET NAME = 'ANDRES INIEST' WHERE ID=3;
+ 
 --17. Delete from extra_type
-
-
-DELETE FROM extra_type where name='four';
-SELECT * FROM extra_type;
+DELETE FROM EXTRA_TYPE WHERE ID =1 ;
 
 --18. Delete from referee
+DELETE FROM REFEREE WHERE ID = 1;
 
-
-SELECT * FROM referee;
-DELETE FROM referee where name = 'john';
-SELECT * FROM referee;
 --19. Delete from player
-
-
-SELECT * FROM player;
-DELETE FROM player where id = 102;
-SELECT * FROM player;
+DELETE FROM PLAYER WHERE TEAM_ID = 1;
 
 --20. Delete from outcome
-SELECT * FROM outcome;
-DELETE FROM outcome where status= 'STAR';
-SELECT * FROM outcome;
-
-
+DELETE FROM OUTCOME WHERE STATUS = 'COMPLETED';
